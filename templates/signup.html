@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+{% extends 'home.html' %}
+{% block body_block %}
+<div class="container">
+    <form method="post">
+        <p>
+    <label for="id_name">Name:</label>
+    <input type="text" name="name" maxlength="50" required id="id_name">
+
+
+  </p>
+
+
+  <p>
+    <label for="id_mail">Mail:</label>
+    <input type="email" name="mail" maxlength="128" required id="id_mail">
+
+
+  </p>
+
+
+  <p>
+    <label for="id_password">Password:</label>
+    <input type="text" name="password" maxlength="30" required id="id_password">
+
+
+  </p>
+
+
+  <p>
+    <label for="id_repeat_pass">Repeat pass:</label>
+    <input type="text" name="repeat_pass" maxlength="30" required id="id_repeat_pass">
+  </p>
+        {% csrf_token %}
+        <input type="submit" value="register">
+  </form>
+</div>
+{% endblock %}
